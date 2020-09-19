@@ -28,6 +28,7 @@ class Util_GeraContratoGog {
         $urlTemp[0] = $dataConfiguracao["nm_url_absoluta"] . "/site/html/contrato/".$dataContratoGog["nm_contrato_gog"].$this->idCliente.".htm";
         //$urlTemp[1] = $dataConfiguracao["nm_url_absoluta"] . "/site/html/contratoPlusTemp.htm";
         //$urlTemp[2] = $dataConfiguracao["nm_url_absoluta"] . "/site/html/contratoMasterTemp.htm";
+
         $urlCss = $dataConfiguracao["nm_url_absoluta"] . "/site/css/contrato.css";
         $replace = array("#???????"=>$dataContratoGog["nm_cliente"].", CPF: ".Util_Util::organizeCPF($dataContratoGog["nu_cpf"]).", Rg: ".$dataContratoGog["nu_rg"]." e Residente: ".$dataContratoGog["nm_logradouro"]." ".$dataContratoGog["nm_bairro"], "???????"=>$dataContratoGog["nm_cliente"]);
         $isSingle = ($dataContratoGog["co_seq_contrato_gog"]==12)?true:false;
